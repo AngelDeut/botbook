@@ -32,6 +32,7 @@ def count_chars(words):
 my_dict = count_chars(file_contents)
 #print(my_dict)
 
+
 def sorted_chars(chars_dict):
     unsorted_chars_list = []
     for char in chars_dict:
