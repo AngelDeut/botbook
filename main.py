@@ -34,12 +34,12 @@ my_dict = count_chars(file_contents)
 
 
 def sorted_chars(chars_dict):
-    unsorted_chars_list = []
+    sorted_chars_list = []
     for char in chars_dict:
-        unsorted_chars_list.append((char,chars_dict[char]))         
-    unsorted_chars_list.sort(key=lambda a: a[1], reverse= True)
-    for i in range(len(unsorted_chars_list)-1):
-        print(f"The '{unsorted_chars_list[i][0]}' character was found {unsorted_chars_list[i][1]} times ")
+        sorted_chars_list.append((char,chars_dict[char]))         
+    sorted_chars_list.sort(key=lambda a: a[1], reverse= True)
+    for i in range(len(sorted_chars_list)):
+        print(f"The '{sorted_chars_list[i][0]}' character was found {sorted_chars_list[i][1]} times ")
     
 sorted_chars(my_dict)    
 
