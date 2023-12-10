@@ -1,5 +1,16 @@
-with open('book.txt') as f:
-    file_contents = f.read()
+def main():
+    path = 'books/book.txt'
+    print('--- Begin report of books/book.txt ---')
+    text = open_file(path)
+
+    count(text)
+    
+    my_dict = count_chars(text)
+
+    sorted_chars(my_dict)
+
+
+
 
 #print(file_contents)
 
@@ -10,7 +21,7 @@ def count(words):
        # print(word)
         count += 1
     print(f'{count} words found in the document') 
-count(file_contents)  
+#count(file_contents)  
 
 
 
@@ -29,7 +40,7 @@ def count_chars(words):
             chars_dict[char] += 1
     return chars_dict 
 
-my_dict = count_chars(file_contents)
+#my_dict = count_chars(file_contents)
 #print(my_dict)
 
 
@@ -41,5 +52,10 @@ def sorted_chars(chars_dict):
     for i in range(len(sorted_chars_list)):
         print(f"The '{sorted_chars_list[i][0]}' character was found {sorted_chars_list[i][1]} times ")
     
-sorted_chars(my_dict)    
+#sorted_chars(my_dict)    
+def open_file(path):
+    with open(path) as f:
+        return f.read()
 
+
+main()
